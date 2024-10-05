@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tutorial", "Tutorial", "{2D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial1.1", "Tutorial1.1\Tutorial1.1.csproj", "{40CA2CF4-BCA1-427E-96A3-80059E818135}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tutorial2.1", "Tutorial2.1\Tutorial2.1.csproj", "{8E09783E-5AF4-4613-B43E-5FE020C40463}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +25,17 @@ Global
 		{40CA2CF4-BCA1-427E-96A3-80059E818135}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40CA2CF4-BCA1-427E-96A3-80059E818135}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40CA2CF4-BCA1-427E-96A3-80059E818135}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E09783E-5AF4-4613-B43E-5FE020C40463}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E09783E-5AF4-4613-B43E-5FE020C40463}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E09783E-5AF4-4613-B43E-5FE020C40463}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E09783E-5AF4-4613-B43E-5FE020C40463}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{40CA2CF4-BCA1-427E-96A3-80059E818135} = {2D115A1B-9970-480B-873F-F0F1C839F1DF}
+		{8E09783E-5AF4-4613-B43E-5FE020C40463} = {2D115A1B-9970-480B-873F-F0F1C839F1DF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D296727B-6398-4030-8173-718175DD9D1C}
