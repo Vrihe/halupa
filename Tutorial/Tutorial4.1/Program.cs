@@ -86,6 +86,35 @@ namespace Tutorial4._1
             
             }else
                 Console.WriteLine("Иди нахуй");
+            Console.WriteLine("Напишите значение переменной");
+
+            short isNumber_2 = Convert.ToInt16(Console.ReadLine());
+
+            //switch-case это тоже самое что и if-else только с 1 переменной и множеством случаев
+            // если эта переменная проходит по условиям
+            //оператор default это тоже самое что и else только для switch-case
+        
+            switch (isNumber_2)
+            {
+                case 5:
+                    Console.WriteLine("цыфра равна 5-ти"); break;
+                case 10:
+                    Console.WriteLine("10"); 
+                    break;
+                case 15:
+                    Console.WriteLine("15"); 
+                    break;
+                case 20:
+                    Console.WriteLine("20"); 
+                    break;
+                case 25:
+                    Console.WriteLine("25");
+                    break;
+                default:
+                    Console.WriteLine("ди наху"); 
+                    break;
+                   
+            }
 
 
 
@@ -100,7 +129,10 @@ namespace Tutorial4._1
 
 
 
-            
+
+
+
+
 
             Console.ReadKey();
         }
