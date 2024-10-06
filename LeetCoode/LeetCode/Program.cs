@@ -1,4 +1,4 @@
-﻿namespace LeetCode.Ex1
+﻿namespace LeetCode
 {
     internal class Program
     {
