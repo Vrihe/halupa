@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial2.1", "Tutorial\Tut
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial3.1", "Tutorial\Tutorial3.1\Tutorial3.1.csproj", "{C6E8EB07-E2E7-460E-BD5E-AA6C5D101DAA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial4.1", "Tutorial\Tutorial4.1\Tutorial4.1.csproj", "{E372F65C-E88A-40D4-A4CD-72CE2E2721F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial4.1 if else", "Tutorial\Tutorial4.1\Tutorial4.1 if else.csproj", "{E372F65C-E88A-40D4-A4CD-72CE2E2721F2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LeetCode", "LeetCode", "{E219897A-416A-46EB-910E-1B8C89E8DE6C}"
 EndProject
@@ -21,11 +21,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Practics", "Practics", "{C3
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Krestiki_Noliki", "Practics\Krestiki_Noliki\Krestiki_Noliki.csproj", "{A2B3207D-E62B-4FDC-8A8F-219AFFBD1EF8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial5.1", "Tutorial\Tutorial5.1\Tutorial5.1.csproj", "{02A7D2E5-E73F-4C30-9F30-A51C35DA97EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial5.1 cycles", "Tutorial\Tutorial5.1\Tutorial5.1 cycles.csproj", "{02A7D2E5-E73F-4C30-9F30-A51C35DA97EA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial7.1", "Tutorial\Tutorial7.1\Tutorial7.1.csproj", "{73B5909B-C4B2-470F-A46E-91455F3E541E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial7.1 methods", "Tutorial\Tutorial7.1\Tutorial7.1 methods.csproj", "{73B5909B-C4B2-470F-A46E-91455F3E541E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutroial6.1", "Tutorial\Tutroial6.1\Tutroial6.1.csproj", "{2EAEEE52-41A4-4C69-B4CA-A23D6CB700F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutroial6.1 foreach", "Tutorial\Tutroial6.1\Tutroial6.1 foreach.csproj", "{2EAEEE52-41A4-4C69-B4CA-A23D6CB700F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
