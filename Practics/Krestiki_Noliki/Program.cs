@@ -6,6 +6,9 @@
                         ,{ 1, 1, 1 }
                         ,{ 1, 1, 1 }
                                        };
+
+
+
         static void v_Vivod()
         {
             for (int itr = 0; itr < 3; itr++)
@@ -28,8 +31,18 @@
 
                 Console.Write("Введите вертикальный номер ячейки: ");
                 iVertical = Convert.ToInt32(Console.ReadLine());
+                if (Convert.ToInt32(iVertical) < 0 && Convert.ToInt32(iVertical) > 2)
+                {
+                    Console.WriteLine("[ERROR]");
+                    break;
+                }
                 Console.Write("Введите горизонтальный номер ячейки: ");
                 iHorizontal = Convert.ToInt32(Console.ReadLine());
+                if (Convert.ToInt32(iHorizontal) < 0 && Convert.ToInt32(iHorizontal) > 2)
+                {
+                    Console.WriteLine("[ERROR]");
+                    break;
+                }
                 Console.Write("Введите значение для ячейки: ");
                 m_aPole[iVertical, iHorizontal] = Convert.ToInt32(Console.ReadLine());
                 Console.Write("Нажмите любую клавишу для след.хода");
