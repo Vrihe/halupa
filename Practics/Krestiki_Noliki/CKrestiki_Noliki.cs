@@ -4,7 +4,7 @@
 
     internal class CX_O
     {
-        
+        public int[] aTries = new int[3];  
 
         public enum value : uint
         {
@@ -22,39 +22,77 @@
         /// </summary>
         public void m_update()
         {
+            Console.Clear();
             m_print_avMat3x3();
-            m_Input();
+            if(m_Input() == true)
+            {
             m_AI();
+            } 
+           //Этот блок отвечает за проверку победы Х-сов
+           //он считает количество побед
             if(m_checkW_L (value.X)  == true)
             {
                 Console.Clear();
                 m_print_avMat3x3();
                 Console.WriteLine("Winner is: X!");
-                for (int itr_0 = 0; itr_0 < 3; itr_0++)
-                {
-                    for (int itr_1 = 0;itr_1 < 3; itr_1++)
-                    {
-                    m_avMat3x3[itr_0,itr_1] = value.NON;
-                    }
-                }
+                aTries[0]++;
+                          //цикл отвечает за обнуление матрицы
+                            for (int itr_0 = 0; itr_0 < 3; itr_0++)
+                            {
+                                for (int itr_1 = 0;itr_1 < 3; itr_1++)
+                                {
+                                m_avMat3x3[itr_0,itr_1] = value.NON;
+                                }
+                            }
             }
-           else if (m_checkW_L (value.O) == true)
+            //Этот блок отвечает за проверку победы О-ей
+            //он считает количество побед
+            else if (m_checkW_L (value.O) == true)
             {
                 Console.Clear();
                 m_print_avMat3x3();
                 Console.WriteLine("Winner is: O!");
+                aTries[1]++; 
+                          //цикл отвечает за обнуление матрицы
+                            for (int itr_0 = 0; itr_0 < 3; itr_0++)
+                            {
+                                for (int itr_1 = 0; itr_1 < 3; itr_1++)
+                                {
+                                    m_avMat3x3[itr_0, itr_1] = value.NON;
+                                }
+                            }
+            }
+           //блок который отвечает за ничью
+            else
+            {
+                int iTmp = 0;
                 for (int itr_0 = 0; itr_0 < 3; itr_0++)
                 {
                     for (int itr_1 = 0; itr_1 < 3; itr_1++)
                     {
-                        m_avMat3x3[itr_0, itr_1] = value.NON;
+                      if (m_avMat3x3[itr_0,itr_1] != value.NON)
+                        {
+                            iTmp++;
+                         
+                        }
+                        
+                    }
+                }
+                if(iTmp == 9)
+                {
+                    Console.WriteLine("\n\tTie!");
+                    aTries[2]++;
+                    for (int itr_0 = 0; itr_0 < 3; itr_0++)
+                    {
+                        for (int itr_1 = 0; itr_1 < 3; itr_1++)
+                        {
+                            m_avMat3x3[itr_0, itr_1] = value.NON;
+                        }
                     }
                 }
             }
-            else
-            {
-            Console.Clear();
-            }
+                            
+
         }
         /// <summary>
         /// метод проверки на победу
@@ -94,10 +132,10 @@
         {
             for (int itr_0 = 0; itr_0 < (3); itr_0++)
             {             
-                    //Console.WriteLine($"{m_avMat3x3[itr_0, 0]} {m_avMat3x3[itr_0, 1]} {m_avMat3x3[itr_0, 2]}");
                     Console.WriteLine("{0,3}|{1,3}|{2,3}", m_avMat3x3[itr_0, 0], m_avMat3x3[itr_0, 1], m_avMat3x3[itr_0, 2]);
             }
-
+            Console.WriteLine("\n\tX won {0} times.\n\tO won {1} times.", aTries[0], aTries[1]);
+            Console.WriteLine("\tTies: " + aTries[2]);
         }
         /// <summary>
         /// иишка
@@ -109,74 +147,51 @@
             Random CRandom = new();
             do
             {
-                iHorizontal =  CRandom.Next(2);
-                  iVertical =  CRandom.Next(2);
+                iHorizontal =  CRandom.Next(3);
+                  iVertical =  CRandom.Next(3);
                     if (m_avMat3x3[iHorizontal, iVertical] == value.NON)
                     {
                         m_avMat3x3[iHorizontal, iVertical] = value.O;
                         bCheck = false;
                     }
             }while (bCheck);
-
-        
-            
-        }
-       
+        }      
         //метод считывает ввод с клавиатуры
        public int m_iChecToint()
         {
+            int iAnswer = -1;
             ConsoleKeyInfo CKey;
             CKey = Console.ReadKey();
             switch (CKey.Key)
             {
                 case ConsoleKey.D1:
-                   return 0;
+                   iAnswer = 0;break;
                 case ConsoleKey.D2:
-                   return 1;
+                   iAnswer = 1;break;
                 case ConsoleKey.D3:
-                   return 2;
-                default:
-                    Console.WriteLine("Ты нормально пиши, да?");break;
+                   iAnswer = 2;break;        
             }
-            return -1;
+            return iAnswer;
         }
         //выбирает ячейку и присвает ей Х
-        public void m_Input()   
+        public bool m_Input()   
         {
             int ivertical, ihorizontal;
             Console.WriteLine("\n\tВведите вертикальный номер ячейки(от 1 до 3): ");
             ivertical = m_iChecToint();
             Console.WriteLine("\n\tВведите горизонтальный номер ячейки(от 1 до 3): ");
-            ihorizontal = m_iChecToint();
-            if (m_avMat3x3[ihorizontal, ivertical] == value.NON)
+            ihorizontal = m_iChecToint();           
+            //проверка на вшивость
+            if (ivertical != -1 && ihorizontal != -1)
             {
-                m_avMat3x3[ihorizontal, ivertical] = value.X;
-            }
-
+                if (m_avMat3x3[ihorizontal, ivertical] == value.NON)
+                {
+                    m_avMat3x3[ihorizontal, ivertical] = value.X;
+                } return true;
+            } else 
+            {
+                return false; } 
         }
 
-
-
-
-
-
-        //CKey = Console.ReadKey();
-        //Console.Clear();
-        //switch (CKey.Key)
-        //{
-        //    case ConsoleKey.Escape:
-        //        { 
-        //        Console.WriteLine(" huy"); break;
-        //       bKey_1 = false;
-        //        }
-        //    case ConsoleKey.Tab:
-        //        Console.WriteLine("zalupa");break;
-        //    case ConsoleKey.Enter:
-        //        Console.WriteLine("kaskak");break;
-        //    case ConsoleKey.W:
-        //        Console.WriteLine("pizdq"); break;
-        //    default:
-        //        Console.WriteLine("Ne ugadal");break;
-        //}
     }
 }
