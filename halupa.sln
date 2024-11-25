@@ -31,7 +31,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tutorial8.1 classes", "Tuto
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "x_o_UI", "Practics\x_o_UI\x_o_UI.csproj", "{9D374C3E-9BBB-4924-A594-DCA0E0B0B915}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "x_o", "Practics\x_o\x_o.csproj", "{FA84BE8B-88F7-452B-BC73-B324EB54BB70}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "x_o", "Practics\x_o\x_o.csproj", "{FA84BE8B-88F7-452B-BC73-B324EB54BB70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

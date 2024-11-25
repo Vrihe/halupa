@@ -6,9 +6,11 @@
 namespace Tutorial1._1
 {
     class CTutorial
-    {  //Точка входа в прогу
+    {
+        //Точка входа в прогу
         static void Main()
-        {  //Исполняемый код
+        {
+            //Исполняемый код
             Console.WriteLine("el niggas la capuero");
             //Ожидание ввода символа пользователем
             Console.ReadKey();
